@@ -83,7 +83,7 @@ INVALID_SOURCE_ADDRESSES = [(("192.0.2.255", 0), False), (("2001:db8::1", 0), Tr
 #    values at the pool level and at the request level.
 SHORT_TIMEOUT = 0.001
 LONG_TIMEOUT = 0.01
-if os.environ.get("CI") or os.environ.get("GITHUB_ACTIONS") == "true" or platform.machine() == 'ARM64':
+if os.environ.get("CI") or os.environ.get("GITHUB_ACTIONS") == "true" or platform.machine() == "ARM64":
     LONG_TIMEOUT = 0.5
 
 DUMMY_POOL = ConnectionPool("dummy")
